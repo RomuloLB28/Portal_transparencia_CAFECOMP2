@@ -1,0 +1,47 @@
+.alertas-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  height: 514px;
+  box-sizing: border-box; /* Para evitar overflow horizontal */
+}
+
+.alerta {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.alerta h3, .alerta h4 {
+  margin: 0.5rem 0;
+}
+
+.alerta h3 {
+  font-size: 1.5rem;
+}
+
+.alerta h4 {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .alertas-container {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%; /* Garantir que ocupa a largura total da tela */
+  }
+
+  .alerta {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
