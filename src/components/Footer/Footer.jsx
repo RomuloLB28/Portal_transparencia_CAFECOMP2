@@ -10,8 +10,8 @@ function Footer() {
                     Campus Universitário de Tucuruí</p>
             </div>
             <div id="direita">
-                <img src="\assets\images\Logomarca BRANCA.png" alt="" />
-                <img src="\assets\images\ufpa.png" alt="" />
+                <img src="/assets/images/Logomarca BRANCA.png" alt="" />
+                <img src="/assets/images/ufpa.png" alt="" />
             </div>
         </footer>
     );
