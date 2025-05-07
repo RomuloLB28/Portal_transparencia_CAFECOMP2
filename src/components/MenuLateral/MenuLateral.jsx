@@ -1,7 +1,6 @@
 // components/MenuLateral.jsx
 import "./MenuLateral.css";
 import { X } from "lucide-react";
-
 function MenuLateral({ visivel, onFechar, onSelecionarPagina, paginaSelecionada }) {
   return (
     <aside className={`menuLateral ${visivel ? "mostrar" : ""}`}>
@@ -11,7 +10,7 @@ function MenuLateral({ visivel, onFechar, onSelecionarPagina, paginaSelecionada 
         </button>
       )}
 
-      <img src="./src/assets/images/cafecompLogo.png" alt="Logo" />
+      <img src="/assets/images/cafecompLogo.png" alt="Logo" />
       <nav>
         <ul>
           <li
