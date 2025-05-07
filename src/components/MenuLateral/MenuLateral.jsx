@@ -10,7 +10,7 @@ function MenuLateral({ visivel, onFechar, onSelecionarPagina, paginaSelecionada 
         </button>
       )}
 
-      <img src="/assets/images/cafecompLogo - Copia.png" alt="Logo" />
+      <img src="/assets/images/cafecompLogo.png" alt="Logo" />
       <nav>
         <ul>
           <li
