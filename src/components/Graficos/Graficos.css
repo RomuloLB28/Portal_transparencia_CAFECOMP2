@@ -1,49 +1,63 @@
-.graficos-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Adicione isso no seu CSS global se ainda não tiver */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.graficos-scroll {
-    max-height: 60vh;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 1rem;
+/* Container geral ocupando 100% da tela */
+.graficos-container {
+    width: 100vw;
+    height: 100vh;
     padding: 1rem;
-    background-color: #fff;
-    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+/* Área que comporta os gráficos */
+.graficos-scroll {
+    flex: 1;
+    overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
-    /* Removido o overflow-y para não ter scroll */
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
+/* Estilo individual dos gráficos */
 .grafico {
-    flex: 1 1 30%;  /* Ajustado para distribuir os gráficos de forma equilibrada */
-    min-width: 200px;
-    height: 220.5px;   /* Altura ajustada */
+    flex: 1 1 48%;
+    min-width: 300px;
     background-color: #f9f9f9;
     border-radius: 6px;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;  /* Garante que padding não afete as dimensões */
+    box-sizing: border-box;
+    height: 100%;
 }
 
+/* Título dos gráficos */
 .grafico h3 {
     margin-bottom: 0.7rem;
     font-size: 1.1rem;
     color: #333;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .graficos-scroll {
         flex-direction: column;
     }
 
     .grafico {
-        width: 100%; /* Garante que ocupe toda a largura em telas menores */
-        height: 260px;
+        width: 100%;
+        height: 300px;
     }
 }
