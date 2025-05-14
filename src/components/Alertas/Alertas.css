@@ -39,6 +39,7 @@
     padding: 1rem;
     width: 100%;
     max-width: 100%; /* Garantir que ocupa a largura total da tela */
+    height: 100%;
   }
 
   .alerta {
