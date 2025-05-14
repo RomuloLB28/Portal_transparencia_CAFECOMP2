@@ -2,6 +2,7 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .tabela-scroll {
@@ -11,6 +12,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   margin-top: 1rem;
+  
 }
 
 .tabela-transacoes {
