@@ -5,7 +5,7 @@ import QuadroValores from "./components/QuadroValores/QuadroValores";
 import Footer from "./components/Footer/Footer";
 import Transacoes from "./components/Transacoes/Transacoes";
 import Graficos from "./components/Graficos/Graficos";
-import Alertas from "./components/Alertas/Alertas";  {/* ✅ Importação do componente */}
+import Alertas from "./components/Alertas/Alertas";
 import { Menu } from "lucide-react";
 
 function App() {
@@ -14,7 +14,12 @@ function App() {
   const [saldo, setSaldo] = useState([]);
   const [paginaAtual, setPaginaAtual] = useState("dashboard");
   const [paginaSelecionada, setPaginaSelecionada] = useState("dashboard");
-  const [saldoCompleto, setSaldoCompleto] = useState([]);  {/* ✅ Armazenando todos os dados */}
+  const [saldoCompleto, setSaldoCompleto] = useState([]);
+
+  // ✅ Estados para o formulário de feedback
+  const [email, setEmail] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   const onSelecionarPagina = (pagina) => {
     setPaginaSelecionada(pagina);
@@ -29,7 +34,7 @@ function App() {
           .sort((a, b) => new Date(a.data) - new Date(b.data))
           .at(-1);
         setSaldo([ultimo]);
-        setSaldoCompleto(data);  {/* ✅ Passando todos os dados */}
+        setSaldoCompleto(data);
       })
       .catch((err) => {
         console.error("Erro ao buscar dados:", err);
@@ -43,6 +48,29 @@ function App() {
 
   const formatarValor = (valor) =>
     valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+  const abrirModal = () => {
+    // ✅ Limpa os campos toda vez que abrir o modal
+    setEmail("");
+    setAssunto("");
+    setMensagem("");
+    setModalAberto(true);
+  };
+
+  const enviarFeedback = () => {
+    console.log("Email:", email);
+    console.log("Assunto:", assunto);
+    console.log("Mensagem:", mensagem);
+
+    alert("Feedback enviado com sucesso!");
+
+    // ✅ Limpa os campos após enviar (opcional)
+    setEmail("");
+    setAssunto("");
+    setMensagem("");
+
+    setModalAberto(false);
+  };
 
   return (
     <div className="window">
@@ -96,7 +124,7 @@ function App() {
               <p>
                 Dúvidas? Reclamações? Envie um feedback e entraremos em contato!
               </p>
-              <button id="botaoFeedback" onClick={() => setModalAberto(true)}>
+              <button id="botaoFeedback" onClick={abrirModal}>
                 FEEDBACK
               </button>
             </div>
@@ -105,7 +133,7 @@ function App() {
 
         {paginaAtual === "transacoes" && <Transacoes dados={saldoCompleto} />}
         {paginaAtual === "graficos" && <Graficos dados={saldoCompleto} />}
-        {paginaAtual === "alertas" && <Alertas dados={saldoCompleto} />} {/* ✅ Passando os dados para Alertas */}
+        {paginaAtual === "alertas" && <Alertas dados={saldoCompleto} />}
 
         <Footer />
       </main>
@@ -115,15 +143,30 @@ function App() {
           <div className="modal">
             <h2>FEEDBACK</h2>
             <label>Seu email</label>
-            <input type="email" />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <label>Assunto</label>
-            <input type="text" />
-            <textarea rows="5"></textarea>
+            <input
+              type="text"
+              value={assunto}
+              onChange={(e) => setAssunto(e.target.value)}
+            />
+            <label>Mensagem</label>
+            <textarea
+              rows="5"
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
+            ></textarea>
             <p className="warning">
               Atenção: isto é uma mensagem de envio único, então revise seu
               texto antes do envio!
             </p>
-            <button className="send">Enviar</button>
+            <button className="send" onClick={enviarFeedback}>
+              Enviar
+            </button>
             <button className="cancel" onClick={() => setModalAberto(false)}>
               Cancelar
             </button>
