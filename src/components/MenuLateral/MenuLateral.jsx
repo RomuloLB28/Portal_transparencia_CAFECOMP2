@@ -1,6 +1,20 @@
-// components/MenuLateral.jsx
 import "./MenuLateral.css";
 import { X } from "lucide-react";
+
+/**
+ * Componente de menu lateral da aplicação.
+ * 
+ * Permite navegação entre páginas e possui botão para fechar no mobile.
+ * 
+ * @component
+ * @param {Object} props - Propriedades do componente.
+ * @param {boolean} props.visivel - Define se o menu está visível.
+ * @param {Function} props.onFechar - Função chamada ao fechar o menu.
+ * @param {Function} props.onSelecionarPagina - Função chamada ao selecionar uma página.
+ * @param {string} props.paginaSelecionada - Página atualmente selecionada.
+ * 
+ * @returns {JSX.Element} O componente de menu lateral.
+ */
 function MenuLateral({ visivel, onFechar, onSelecionarPagina, paginaSelecionada }) {
   return (
     <aside className={`menuLateral ${visivel ? "mostrar" : ""}`}>

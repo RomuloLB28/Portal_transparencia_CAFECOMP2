@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Alertas.css";
 
-// Função para calcular a diferença de dias entre a data atual e o último relatório
+/**
+ * Calcula a quantidade de dias desde a data do último relatório até hoje.
+ * 
+ * @param {string|Date} dataUltimoRelatorio - A data do último relatório (string ou objeto Date).
+ * @returns {number} Quantidade de dias desde o último relatório.
+ */
 const calcularDiasDesdeUltimoRelatorio = (dataUltimoRelatorio) => {
   const hoje = new Date();
   const ultimoRelatorio = new Date(dataUltimoRelatorio);
@@ -10,6 +15,15 @@ const calcularDiasDesdeUltimoRelatorio = (dataUltimoRelatorio) => {
   return diffDays;
 };
 
+/**
+ * Componente que exibe alertas sobre o saldo atual,
+ * progresso para uma meta financeira e a atualização dos relatórios.
+ * 
+ * @param {Object} props - Propriedades do componente.
+ * @param {Array<{saldo: number, data: string}>} props.dados - Lista de objetos com saldo e data dos relatórios.
+ * 
+ * @returns {JSX.Element} O componente de alertas.
+ */
 function Alertas({ dados }) {
   const [alertaRelatorio, setAlertaRelatorio] = useState("");
   const [saldoAtual, setSaldoAtual] = useState(0);

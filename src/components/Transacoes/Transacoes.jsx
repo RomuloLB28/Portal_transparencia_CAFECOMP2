@@ -1,6 +1,14 @@
-// components/Transacoes.jsx
 import "./Transacoes.css";
 
+/**
+ * Componente que exibe uma tabela de transações com data e saldo.
+ * 
+ * @component
+ * @param {Object} props - Propriedades do componente.
+ * @param {Array<{id: number, data: string, saldo: number}>} props.dados - Lista de transações contendo id, data e saldo.
+ * 
+ * @returns {JSX.Element} O componente de transações.
+ */
 function Transacoes({ dados }) {
   return (
     <div className="transacoes-container">
