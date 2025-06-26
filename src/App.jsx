@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Transacoes from "./components/Transacoes/Transacoes";
 import Graficos from "./components/Graficos/Graficos";
 import Alertas from "./components/Alertas/Alertas";
+import Sobre from "./components/Sobre/Sobre";
 import { Menu } from "lucide-react";
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
   };
 
   useEffect(() => {
-    fetch("https://portal-transparencia-cafecomp-backend.onrender.com/api/caixa")
+    fetch(
+      "https://portal-transparencia-cafecomp-backend.onrender.com/api/caixa"
+    )
       .then((res) => res.json())
       .then((data) => {
         const ultimo = data
@@ -134,6 +137,7 @@ function App() {
         {paginaAtual === "transacoes" && <Transacoes dados={saldoCompleto} />}
         {paginaAtual === "graficos" && <Graficos dados={saldoCompleto} />}
         {paginaAtual === "alertas" && <Alertas dados={saldoCompleto} />}
+        {paginaAtual === "sobre" && <Sobre />}
 
         <Footer />
       </main>

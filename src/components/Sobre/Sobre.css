@@ -1,0 +1,77 @@
+.sobre-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.sobre-conteudo {
+  background-color: #d1d1d1;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left; /* 👈 Alinha tudo à esquerda */
+}
+
+.sobre-conteudo p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.sobre-conteudo .desenvolvedores {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+/* 🔗 Estilização dos links */
+.sobre-conteudo a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+
+  /* remove o fundo azul do hover/focus/active */
+  background-color: transparent;
+  outline: none;
+}
+
+/* Remove estilo azul automático do navegador ao clicar ou focar */
+.sobre-conteudo a:hover,
+.sobre-conteudo a:focus,
+.sobre-conteudo a:active {
+  background-color: transparent;
+  color: #0073e6; /* Mantém a cor azul */
+  outline: none;
+  box-shadow: none;
+}
+.sobre-conteudo a:hover {
+  color: #004fa3; /* Azul mais escuro no hover */
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .sobre-container {
+    width: 85%;
+    max-width: 100%;
+    height: calc(100vh - 120px);
+    padding: 1rem;
+  }
+
+  .sobre-conteudo {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .sobre-conteudo p {
+    font-size: 1rem;
+  }
+
+  .sobre-conteudo .desenvolvedores {
+    font-size: 1.2rem;
+  }
+}

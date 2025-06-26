@@ -51,6 +51,12 @@ function MenuLateral({ visivel, onFechar, onSelecionarPagina, paginaSelecionada 
           >
             Alertas
           </li>
+          <li
+            className={paginaSelecionada === "sobre" ? "ativo" : ""}
+            onClick={() => onSelecionarPagina("sobre")}
+          >
+            Sobre
+          </li>
         </ul>
       </nav>
     </aside>
