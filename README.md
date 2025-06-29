@@ -8,8 +8,11 @@ Este projeto foi desenvolvido com o objetivo de promover a transparência das at
 - [Git](https://git-scm.com/) e [GitHub](https://github.com/)
 ## 🚀 Como rodar localmente Siga os passos abaixo para clonar e executar o projeto na sua máquina:
 1 - abra o vscode na pasta que deseja salvar o projeto
+
 2 - abra o terminal no vscode
+
 3 - no terminal rode o comando abaixo:
+
 git clone https://github.com/RomuloLB28/Portal_transparencia_CAFECOMP2.git
 
 4 - entre no diretório por meio do comando abaixo:
