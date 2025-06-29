@@ -43,5 +43,6 @@ https://portal-transparencia-cafecomp-2.vercel.app/
 Desenvolvido por Romulo Lobato Bezerra e David Duarte
 
 📧 codebyromulo@gmail.com
+
 📧 davidduart04@gmail.com
 
