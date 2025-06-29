@@ -1,12 +1,48 @@
-# React + Vite
+# 🧾 Portal da Transparência - CAFEComp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido com o objetivo de promover a transparência das atividades financeiras do Centro Acadêmico de Engenharia da Computação da UFPA (CAFEComp). O sistema permite divulgar de forma acessível e clara os gastos, receitas e eventos organizados pelo CA, fortalecendo a comunicação com a comunidade acadêmica.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- [React.js](https://reactjs.org/)
+- [CSS](https://www.w3schools.com/CSSref/index.php)
+- [Vite](https://vitejs.dev/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Git](https://git-scm.com/) e [GitHub](https://github.com/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Como rodar localmente
+
+Siga os passos abaixo para clonar e executar o projeto na sua máquina:
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/RomuloLB28/Portal_transparencia_CAFECOMP2.git
+
+#Acessar o projeto
+cd Portal_transparencia_CAFECOMP2
+
+#Instale as dependências
+npm install
+
+#Execute o projeto
+npm run dev
+#O projeto será iniciado em http://localhost:5173
+
+🖼️ Interface 
+
+Em breve serão adicionadas capturas de tela da aplicação.
+
+🌐 Deploy 
+
+A versão online do projeto será disponibilizada futuramente.
+
+👨‍💻 Autor 
+
+Desenvolvido por Romulo Lobato Bezerra
+📧 codebyromulo@gmail.com
+
