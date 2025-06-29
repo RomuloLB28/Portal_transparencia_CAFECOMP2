@@ -38,7 +38,10 @@ Em breve serão adicionadas capturas de tela da aplicação.
 O frontend do projeto foi hospedado na plataforma vercel e a versão online do projeto pode ser vista no link abaixo:
 https://portal-transparencia-cafecomp-2.vercel.app/
 
-# 👨‍💻 Autor 
+# 👨‍💻 Autores
 
-Desenvolvido por Romulo Lobato Bezerra
+Desenvolvido por Romulo Lobato Bezerra e David Duarte
+
 📧 codebyromulo@gmail.com
+📧 davidduart04@gmail.com
+
