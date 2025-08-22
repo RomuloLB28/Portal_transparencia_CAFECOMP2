@@ -31,7 +31,7 @@ npm run dev
 
 # 🖼️ Interface 
 
-Em breve serão adicionadas capturas de tela da aplicação.
+![tela](https://github.com/RomuloLB28/Portal_transparencia_CAFECOMP2/blob/main/public/assets/images/imagem_2025-08-22_151344791.png)
 
 # 🌐 Deploy 
 
